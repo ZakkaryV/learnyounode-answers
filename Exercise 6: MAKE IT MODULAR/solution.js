@@ -1,0 +1,13 @@
+var mod = require('./test6-module.js');
+
+var callback = function(err, data) {
+		if (err) {return console.error(err)}
+		for (var i = 0; i < data.length; i++) {
+			console.log(data[i]);
+			}
+		}
+		
+		
+
+mod(process.argv[2], process.argv[3], callback);
+
